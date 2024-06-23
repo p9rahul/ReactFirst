@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter } from 'react-router-dom';
 
 // import App from './App';
 
@@ -13,7 +14,13 @@ import ReactDOM from 'react-dom';
 
 // import UseEffectExample from './Components/UseEffectExample'
 
-import Statewise from './liveCovid/Statewise';
-import "./liveCovid/statewise.css"
+// import Statewise from './liveCovid/Statewise';
+// import "./liveCovid/statewise.css"
 
-ReactDOM.render(<Statewise />, document.getElementById("root"))
+import App1 from './ReactRouterDOM/App1';
+
+ReactDOM.render(
+    <BrowserRouter>
+        <App1 />
+    </BrowserRouter>
+    , document.getElementById("root"))
