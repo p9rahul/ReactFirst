@@ -14,11 +14,16 @@ const Statewise = () => {
     const [data, setData] = useState([]);
 
     const getCovidData = async () => {
-        const response = await fetch('https://data.covid19india.org/data.json');
-        //convert to JS object 
-        const actualData = await response.json();
-        console.log(actualData.statewise);
-        setData(actualData.statewise);
+    
+        try{
+            const response = await fetch('https://data.covid19india.org/data.json');
+            //convert to JS object 
+            const actualData = await response.json();
+            console.log(actualData.statewise);
+            setData(actualData.statewise);
+        }catch(erro1){
+            console.log(`The error is : ${erro1}`)
+        }
     }
 
     useEffect(() => {
